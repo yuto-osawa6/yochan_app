@@ -67,7 +67,7 @@ class HomePage extends ConsumerWidget {
 
   Widget build(BuildContext context, WidgetRef ref) {
     final asyncValue = ref.watch(listProvider); 
-    print("aa");
+    // print("aa");
     print(asyncValue);
     // print(userViewModel);
     // print(getUsers());
@@ -76,7 +76,9 @@ class HomePage extends ConsumerWidget {
     final _homePageState = ref.watch(homePageProvider);
     // provider（状態の操作）
     final _homePageNotifier = ref.watch(homePageProvider.notifier);
+    // print(_homePageState);
     return Scaffold(
+      // print(asyncValue);
       appBar: AppBar(title: const Text('Flutter MVVM')),
       floatingActionButton: FloatingActionButton(
         onPressed: _homePageNotifier.resetAllCount,
@@ -121,6 +123,7 @@ class HomePage extends ConsumerWidget {
       body: Center(
         child: asyncValue.when(
           data: (data) {
+            // print(data);
             return data.isNotEmpty
                 ? ListView(
                     children: data
