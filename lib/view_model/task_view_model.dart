@@ -39,9 +39,9 @@ final homePageProvider =
 
 // import 'package:yochan/repository/task_repo.dart';
 
-class UserViewModel {
-  final userRepository = UserRepository();
-  dynamic fetchUsers() async {
-    return await userRepository.fetchUsers();
-  }
-}
+// class UserViewModel {
+//   final userRepository = UserRepository();
+//   dynamic fetchUsers() async {
+//     return await userRepository.fetchUsers();
+//   }
+// }

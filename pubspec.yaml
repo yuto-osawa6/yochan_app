@@ -38,10 +38,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   english_words: ^4.0.0
   intl: ^0.17.0          #追加
-  flutter_riverpod: ^1.0.4
+  # flutter_riverpod: ^1.0.4
   freezed_annotation:
   dio: ^4.0.6
   http:
+  hooks_riverpod:
+  flutter_hooks:
 
 dev_dependencies:
   flutter_test:

@@ -5,10 +5,10 @@ import 'package:yochan/model/task.dart';
 import 'package:yochan/repository/task_repo.dart';
 
 // Repository(APIの取得)の状態を管理する
-final repositoryProvider = Provider((ref) => UserRepository());
+// final repositoryProvider = Provider((ref) => UserRepository());
 
 // 上記を非同期で管理する
-final listProvider = FutureProvider<List<Task>>((ref) async {
-  final repository = ref.read(repositoryProvider);
-  return await repository.fetchUsers();
-});
+// final listProvider = FutureProvider<List<Task>>((ref) async {
+//   final repository = ref.read(repositoryProvider);
+//   return await repository.fetchUsers();
+// });
