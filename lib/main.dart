@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       //   backgroundColor: Colors.black45
       // ),
       // theme: ThemeData.light(),
-      // darkTheme: ThemeData.dark(),
+      darkTheme: ThemeData.dark(),
       theme: ThemeData.from(
         colorScheme:ColorScheme.light(
           primary:Colors.red,
