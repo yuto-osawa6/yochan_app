@@ -140,7 +140,7 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
         return Container(
             decoration: BoxDecoration(
                 // color: Colors.orange,
-                color: Colors.pink,
+                // color: Colors.pink,
                 borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.0),
                 topRight: Radius.circular(20.0),
