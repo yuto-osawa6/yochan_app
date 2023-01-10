@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       theme: ThemeData.from(
         colorScheme:ColorScheme.light(
-          // primary:Colors.red,
+          primary:Colors.red,
           // surface:Color.fromARGB(255, 176, 57, 48),
           // background:Colors.red,
           ),
