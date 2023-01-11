@@ -14,13 +14,14 @@ Future<dynamic> YouchanThemeSelect (BuildContext context, WidgetRef ref) async {
   final _ThemeNotifier = ref.watch(ThemeProvider.notifier);
 
   showModalBottomSheet(
+      useRootNavigator: true,
       backgroundColor:Colors.transparent,
       context: context,
       isScrollControlled: true,
       builder: (context) {
         return Container(
           decoration: BoxDecoration(
-          color:  Theme.of(context).primaryColor,
+          color:  Theme.of(context).scaffoldBackgroundColor,
           // borderRadius: BorderRadius.only(
           //       topLeft: Radius.circular(20.0),
           //       topRight: Radius.circular(20.0),
@@ -31,7 +32,7 @@ Future<dynamic> YouchanThemeSelect (BuildContext context, WidgetRef ref) async {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon(Icons.square,color:Colors.blueGrey),
+                  leading: Icon(Icons.square,color:Colors.indigo[700]),
                   title: Text('デフォルトテーマ'),
                   onTap: () =>  _ThemeNotifier.changeThemeNumber(0),
                   // leading: Material(
@@ -44,7 +45,7 @@ Future<dynamic> YouchanThemeSelect (BuildContext context, WidgetRef ref) async {
                   // onTap: () =>  _ThemeNotifier.changeThemeNumber(0),
                 ),
                 ListTile(
-                  leading: Icon(Icons.square,color:Colors.blue),
+                  leading: Icon(Icons.square,color:Colors.lightBlue),
                   title: Text('ライトテーマ'),
                   onTap: () => _ThemeNotifier.changeThemeNumber(1),
                 ),
@@ -52,6 +53,11 @@ Future<dynamic> YouchanThemeSelect (BuildContext context, WidgetRef ref) async {
                   leading: Icon(Icons.square,color:Colors.black),
                   title: Text('ダークテーマ'),
                   onTap: () => _ThemeNotifier.changeThemeNumber(2),
+                ),
+                ListTile(
+                  leading: Icon(Icons.square,color:Colors.orangeAccent),
+                  title: Text('オレンジテーマ'),
+                  onTap: () => _ThemeNotifier.changeThemeNumber(3),
                 ),
               ],
             )

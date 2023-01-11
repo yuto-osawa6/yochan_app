@@ -57,6 +57,7 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
 
   try{
     var a = await ApiClientCreateUser().fetchApiCreateUser();
+    // var b = double.parse(a);
     _YouchanNotifier.changeDollerYen(double.parse(a));
 
     final positionValue = int.parse(_YouchanState.positionValue!);
@@ -64,7 +65,14 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
     final outValue = int.parse(_YouchanState.outValue!);
     final nari = double.parse(_YouchanState.nari!)/100;
     final tate = double.parse(_YouchanState.tate!)/100;
-    final yen = 113.9 * outValue;
+    // final yen = 113.9 * outValue;
+    // if(b == null){
+    //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('ドル円を取得できませんでした。')));
+    //   return;
+    // }
+    print(a);
+    final yen = double.parse(a) * outValue;
+    print("aaa:${a}");
     // BTC 実現収入
     var BTC_Z = positionValue*((1/outValue)-(1/inValue))*(_YouchanState.ls== "Long"?-1:1);
     print("BTC:${BTC_Z}");
@@ -140,12 +148,19 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
       builder: (context) {
         return Container(
             decoration: BoxDecoration(
+                // border:  Border(
+                //   top: BorderSide(
+                //     color: Colors.blue, //枠線の色
+                //     width: 5, //枠線の太さ
+                //   ),
+                // ),
                 // color: Colors.orange,
                 // color: Color.fromARGB(255, 35, 34, 34),
                 color: OtherTheme(ref).modalSheatBaseColor,
                 borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.0),
                 topRight: Radius.circular(20.0),
+                
               ),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
@@ -157,6 +172,13 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                Container(
+                  child: 
+                      Align(
+                        alignment: Alignment.centerLeft, //任意のプロパティ
+                        child: Text("${a}")
+                      ),
+                ),
                 // 1
                 Container(
                   child: Column(

@@ -17,6 +17,7 @@ Future<dynamic> fetchApiCreateUser() async {
       // print(response.data);
       var a = jsonDecode(response.data);
       print("ue");
+      print(a["quotes"].firstWhere((item) => item["currencyPairCode"] == "USDJPY"));
       print(a["quotes"].firstWhere((item) => item["currencyPairCode"] == "USDJPY")["open"]);
       // return UserModel.fromJson(response.data);
       return a["quotes"].firstWhere((item) => item["currencyPairCode"] == "USDJPY")["open"];

@@ -19,6 +19,8 @@ dynamic OtherTheme = (WidgetRef ref) {
       return yLightTheme();
     case 2:
       return yDarkTheme();
+    case 3:
+    return yDarkTheme2();
     default:
       return yDefaultTheme();
   }
@@ -70,4 +72,15 @@ class yDarkTheme {
   yDarkTheme() {
   }
 }
+
+class yDarkTheme2 {
+  // インスタンス変数
+  final boxColor = Colors.orange[700];
+  final modalSheatBaseColor = Colors.orange[800];
+
+  // コンストラクタ（class名と一緒。javaも同じっぽい）
+  yDarkTheme() {
+  }
+}
+
 

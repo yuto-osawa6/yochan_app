@@ -90,3 +90,77 @@ ThemeData Theme1 = ThemeData(
 );
 
       
+
+
+ThemeData Theme2 = ThemeData(
+  // brightness: Brightness.dark,
+  scaffoldBackgroundColor: Colors.orange[800],
+  dialogBackgroundColor:Colors.green[900],
+  appBarTheme: AppBarTheme(
+    backgroundColor: Colors.green[900]
+  ),
+  // focusColor: Colors.amber,
+  // highlightColor:Colors.amber,
+  // selectedRowColor:Colors.amber,
+  dividerColor: Colors.green[900],
+  // accentColor: w,
+  // backgroundColor: Colors.indigo,
+  primaryColor: Colors.indigo,
+  textSelectionTheme: TextSelectionThemeData(
+    cursorColor: Colors.amber,
+    selectionColor: Colors.amber,
+    selectionHandleColor: Colors.amber
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    suffixIconColor:Colors.green[900],
+  ),
+  // brightness: Brightness.dark,
+  // brightness: primaryColorDark,
+  colorScheme: ColorScheme.fromSwatch(
+        primarySwatch: Colors.indigo,
+        backgroundColor: Colors.indigo,
+//         cardColor: Colors.green,
+        accentColor: Colors.yellow
+//         // primaryColorDark: Colors.indigo,
+//         // accentColor:Colors.green
+        
+        )
+        .copyWith(
+          brightness: Brightness.dark
+          ),
+  buttonTheme: ButtonThemeData(
+    buttonColor: Colors.amber
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      primary: Colors.green[900],
+      elevation: 0,
+      onPrimary: Colors.orange[100],
+      alignment: Alignment.centerLeft,
+    ),
+  ),
+   iconTheme: IconThemeData(
+      color: Colors.white//アイコンの色
+    ),
+   textTheme: TextTheme(
+    bodyText1: TextStyle(),
+    bodyText2: TextStyle(),
+    headline1: TextStyle(),
+    headline2: TextStyle(),
+    headline3: TextStyle(),
+    headline4: TextStyle(),
+    headline5: TextStyle(),
+    headline6: TextStyle(),
+    subtitle1: TextStyle(),
+    // subtitle2: TextStyle(),
+    // caption: TextStyle()
+
+
+   ).apply(
+    bodyColor: Colors.white, 
+    displayColor: Colors.white, 
+    decorationColor: Colors.white
+   ),
+   
+   
+);

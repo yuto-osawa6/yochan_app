@@ -17,8 +17,13 @@ class MyApp extends HookConsumerWidget {
   // const MyApp({Key? key}) : super(key: key);
   final theme = [
     Theme1,
-    ThemeData.light(),
+    ThemeData.light().copyWith(
+      primaryColor: Colors.white,
+      primaryColorLight: Colors.white,
+      // appBarTheme: AppBarTheme(color: Colors.white)
+    ),
     ThemeData.dark(),
+    Theme2,
   ];
   @override
   Widget build(BuildContext context, WidgetRef ref) {
