@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:yochan/service/youchan_client.dart';
 import 'package:yochan/view_model/youchan_vm.dart';
 import 'package:yochan/youchanOtherTheme.dart';
@@ -141,6 +142,7 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
   print(MediaQuery.of(context).size.height);
   var kazuki = MediaQuery.of(context).size.height;
   print(kazuki * 0.8);
+  var comma = NumberFormat('###,###,###,###');
   showModalBottomSheet(
       backgroundColor:Colors.transparent,
       context: context,
@@ -194,7 +196,11 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
                       ),
                       Align(
                         alignment: Alignment.centerRight, //任意のプロパティ
-                        child: Text("JPY利益 ${result1_yen.toInt()} 円")
+                        child: Text("JPY利益 ${comma.format(result1_yen.toInt())} 円")
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight, //任意のプロパティ
+                        child: Text("(${result1_yen})")
                       ),
                     ],
                   )
@@ -213,7 +219,11 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
                       ),
                       Align(
                         alignment: Alignment.centerRight, //任意のプロパティ
-                        child: Text("JPY利益 ${result2_yen.toInt()} 円")
+                        child: Text("JPY利益 ${comma.format(result2_yen.toInt())} 円")
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight, //任意のプロパティ
+                        child: Text("(${result2_yen})")
                       ),
                     ],
                   )
@@ -232,7 +242,11 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
                       ),
                       Align(
                         alignment: Alignment.centerRight, //任意のプロパティ
-                        child: Text("JPY利益 ${result3_yen.toInt()} 円")
+                        child: Text("JPY利益 ${comma.format(result3_yen.toInt())} 円")
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight, //任意のプロパティ
+                        child: Text("(${result3_yen})")
                       ),
                     ],
                   )
@@ -251,7 +265,11 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
                       ),
                       Align(
                         alignment: Alignment.centerRight, //任意のプロパティ
-                        child: Text("JPY利益 ${result4_yen.toInt()} 円")
+                        child: Text("JPY利益 ${comma.format(result4_yen.toInt())} 円")
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight, //任意のプロパティ
+                        child: Text("(${result4_yen})")
                       ),
                     ],
                   )
@@ -274,6 +292,10 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
       return;
     }
     if(e.toString().contains('Invalid radix-10 number')){
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('正しく入力されていない箇所があります。')));
+      return;
+    }
+    if(e.toString().contains('Invalid double')){
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('正しく入力されていない箇所があります。')));
       return;
     }
