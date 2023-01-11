@@ -12,11 +12,11 @@ class ThemeNotifier extends StateNotifier<ThemeYo> {
   // 初期値の指定
   ThemeNotifier() : super(ThemeYo());
 
-  final theme = [
-    Theme1,
-    ThemeData.dark(),
-    ThemeData.light()
-  ];
+  // final theme = [
+  //   Theme1,
+  //   ThemeData.dark(),
+  //   ThemeData.light()
+  // ];
 
   void changeThemeNumber(int value){
     print(value);

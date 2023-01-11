@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:yochan/YouchanThemeSelect.dart';
 import 'package:yochan/service/youchan_client.dart';
 import 'package:yochan/view_model/youchan_vm.dart';
 import 'package:yochan/youchanDialog.dart';
@@ -25,6 +26,17 @@ class YouChanWidget extends HookConsumerWidget {
     //   _initAsync();
     // },[]);
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+            // IconButton(icon: Icon(Icons.search), onPressed: () {}),
+            IconButton(icon: Icon(Icons.more_vert), 
+            onPressed: () async{
+              await YouchanThemeSelect(context, ref);
+            },),
+        ],
+        elevation: 0,
+        // backgroundColor: Colors.transparent,
+      ),
       // backgroundColor: Colors.orange,
       body: Center(
           child: Container(
