@@ -19,6 +19,7 @@ class Youchan with _$Youchan {
     String? nari,
     String? tate,
     double? dollerYen,
+    String? dollerYen2
 
   }) = _Youchan;
 

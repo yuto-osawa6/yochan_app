@@ -57,7 +57,10 @@ class YouChanWidget extends HookConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Long short
-              Container(
+              Row(
+                children: [
+                  Flexible(
+              child:Container(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Column(
                     children: [
@@ -104,6 +107,97 @@ class YouChanWidget extends HookConsumerWidget {
                           )),
                     ],
                   )),
+
+                  ),
+                  Flexible(
+                    child:Container(
+                  padding:const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        // width: double.infinity,
+                        child: Text(
+                          '為替(ドル円)',
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: OtherTheme(ref).boxColor,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            // BoxShadow(
+                            //   color: Color.fromARGB(50, 0, 0, 0), //色
+                            //   spreadRadius: 1, 
+                            //   blurRadius: 10, 
+                            //   offset: Offset(5, 10),
+                            // ),
+                          ],
+                        ),
+                        child:Padding(
+                          padding:const EdgeInsets.symmetric(horizontal: 0.0),
+                          // child:Flexible(
+                            // flex: 1,
+                            child:TextFormField(
+                              maxLength: 7,
+                              controller: ExpressTextController6,
+                              keyboardType: TextInputType.numberWithOptions(decimal: true,signed: true),
+                              // controller: TextEditingController(text: "0"),
+                            decoration: InputDecoration(
+                              counterText: "",
+                              contentPadding: const EdgeInsets.symmetric(
+                                vertical: 10,
+                                horizontal: 10,
+                              ),
+                              suffixIcon: Icon(Icons.percent),
+                              suffixIconConstraints: BoxConstraints(minWidth: 50),
+                              // suffixIcon: Icon(Icons.clear_rounded),
+                              // isDense: true,
+                              border: InputBorder.none,
+                              // hintText:  AppLocalizations.of(context)!.email,                
+                            ),
+                            onChanged: (String value) {
+                              print("aaa");
+                              print('a');
+                                // int.parse(value);
+                                print(value);
+                                // print(double.parse(value));
+                                // print(ExpressTextController);
+                                // changeEmailText(value);
+                                // formatter.format(int.parse(value));
+                                // print(formatter.format(int.parse(value)));
+                                _YouchanNotifier.changeDollerYen2(value.replaceAll(',', ''));
+                                // if(value.last != '.')
+                                // var price = double.parse(value.replaceAll(',', ''));
+                                // var comma = NumberFormat('#,###.###');
+                                // print(comma.format(price));
+                                ExpressTextController6.text = "${value}";
+
+                                // ExpressTextController5.text = comma.format(price).replaceAll(' ', '');
+                                ExpressTextController6.selection = TextSelection.fromPosition(
+                                  TextPosition(
+                                    offset: ExpressTextController6.text.length, //カーソルの位置を一番最初に指定
+                                  ),
+                                );
+                            },
+                          ),
+
+                          ),
+                          
+                        )
+                      // ),
+                    ],
+                  )
+                ),
+
+                  ),
+
+
+                ]
+              ),
               SizedBox(
                 height: 20,
               ),

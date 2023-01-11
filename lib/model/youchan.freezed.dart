@@ -24,6 +24,7 @@ mixin _$Youchan {
   String? get nari => throw _privateConstructorUsedError;
   String? get tate => throw _privateConstructorUsedError;
   double? get dollerYen => throw _privateConstructorUsedError;
+  String? get dollerYen2 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $YouchanCopyWith<Youchan> get copyWith => throw _privateConstructorUsedError;
@@ -40,7 +41,8 @@ abstract class $YouchanCopyWith<$Res> {
       String? positionValue,
       String? nari,
       String? tate,
-      double? dollerYen});
+      double? dollerYen,
+      String? dollerYen2});
 }
 
 /// @nodoc
@@ -60,6 +62,7 @@ class _$YouchanCopyWithImpl<$Res> implements $YouchanCopyWith<$Res> {
     Object? nari = freezed,
     Object? tate = freezed,
     Object? dollerYen = freezed,
+    Object? dollerYen2 = freezed,
   }) {
     return _then(_value.copyWith(
       ls: ls == freezed
@@ -90,6 +93,10 @@ class _$YouchanCopyWithImpl<$Res> implements $YouchanCopyWith<$Res> {
           ? _value.dollerYen
           : dollerYen // ignore: cast_nullable_to_non_nullable
               as double?,
+      dollerYen2: dollerYen2 == freezed
+          ? _value.dollerYen2
+          : dollerYen2 // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -107,7 +114,8 @@ abstract class _$$_YouchanCopyWith<$Res> implements $YouchanCopyWith<$Res> {
       String? positionValue,
       String? nari,
       String? tate,
-      double? dollerYen});
+      double? dollerYen,
+      String? dollerYen2});
 }
 
 /// @nodoc
@@ -128,6 +136,7 @@ class __$$_YouchanCopyWithImpl<$Res> extends _$YouchanCopyWithImpl<$Res>
     Object? nari = freezed,
     Object? tate = freezed,
     Object? dollerYen = freezed,
+    Object? dollerYen2 = freezed,
   }) {
     return _then(_$_Youchan(
       ls: ls == freezed
@@ -158,6 +167,10 @@ class __$$_YouchanCopyWithImpl<$Res> extends _$YouchanCopyWithImpl<$Res>
           ? _value.dollerYen
           : dollerYen // ignore: cast_nullable_to_non_nullable
               as double?,
+      dollerYen2: dollerYen2 == freezed
+          ? _value.dollerYen2
+          : dollerYen2 // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -172,7 +185,8 @@ class _$_Youchan with DiagnosticableTreeMixin implements _Youchan {
       this.positionValue,
       this.nari,
       this.tate,
-      this.dollerYen});
+      this.dollerYen,
+      this.dollerYen2});
 
 // required int id,
   @override
@@ -190,10 +204,12 @@ class _$_Youchan with DiagnosticableTreeMixin implements _Youchan {
   final String? tate;
   @override
   final double? dollerYen;
+  @override
+  final String? dollerYen2;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Youchan(ls: $ls, inValue: $inValue, outValue: $outValue, positionValue: $positionValue, nari: $nari, tate: $tate, dollerYen: $dollerYen)';
+    return 'Youchan(ls: $ls, inValue: $inValue, outValue: $outValue, positionValue: $positionValue, nari: $nari, tate: $tate, dollerYen: $dollerYen, dollerYen2: $dollerYen2)';
   }
 
   @override
@@ -207,7 +223,8 @@ class _$_Youchan with DiagnosticableTreeMixin implements _Youchan {
       ..add(DiagnosticsProperty('positionValue', positionValue))
       ..add(DiagnosticsProperty('nari', nari))
       ..add(DiagnosticsProperty('tate', tate))
-      ..add(DiagnosticsProperty('dollerYen', dollerYen));
+      ..add(DiagnosticsProperty('dollerYen', dollerYen))
+      ..add(DiagnosticsProperty('dollerYen2', dollerYen2));
   }
 
   @override
@@ -222,7 +239,9 @@ class _$_Youchan with DiagnosticableTreeMixin implements _Youchan {
                 .equals(other.positionValue, positionValue) &&
             const DeepCollectionEquality().equals(other.nari, nari) &&
             const DeepCollectionEquality().equals(other.tate, tate) &&
-            const DeepCollectionEquality().equals(other.dollerYen, dollerYen));
+            const DeepCollectionEquality().equals(other.dollerYen, dollerYen) &&
+            const DeepCollectionEquality()
+                .equals(other.dollerYen2, dollerYen2));
   }
 
   @override
@@ -234,7 +253,8 @@ class _$_Youchan with DiagnosticableTreeMixin implements _Youchan {
       const DeepCollectionEquality().hash(positionValue),
       const DeepCollectionEquality().hash(nari),
       const DeepCollectionEquality().hash(tate),
-      const DeepCollectionEquality().hash(dollerYen));
+      const DeepCollectionEquality().hash(dollerYen),
+      const DeepCollectionEquality().hash(dollerYen2));
 
   @JsonKey(ignore: true)
   @override
@@ -250,7 +270,8 @@ abstract class _Youchan implements Youchan {
       final String? positionValue,
       final String? nari,
       final String? tate,
-      final double? dollerYen}) = _$_Youchan;
+      final double? dollerYen,
+      final String? dollerYen2}) = _$_Youchan;
 
   @override // required int id,
   String get ls;
@@ -266,6 +287,8 @@ abstract class _Youchan implements Youchan {
   String? get tate;
   @override
   double? get dollerYen;
+  @override
+  String? get dollerYen2;
   @override
   @JsonKey(ignore: true)
   _$$_YouchanCopyWith<_$_Youchan> get copyWith =>

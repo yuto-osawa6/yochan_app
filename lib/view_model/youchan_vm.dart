@@ -31,6 +31,9 @@ class YouchanNotifier extends StateNotifier<Youchan> {
   void changeDollerYen(double value){
     state = state.copyWith(dollerYen: value);
   }
+   void changeDollerYen2(String value){
+    state = state.copyWith(dollerYen2: value);
+  }
 }
 
 // HomePageNotifierの状態を管理する

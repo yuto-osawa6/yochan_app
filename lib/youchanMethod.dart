@@ -57,9 +57,34 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
 
 
   try{
-    var a = await ApiClientCreateUser().fetchApiCreateUser();
+    print(_YouchanState.dollerYen2);
+    print(_YouchanState.dollerYen2 == null ||_YouchanState.dollerYen2!.length < 1);
+
+
+    int factorial(int value) {
+      int result = 1;
+      for(int i = 1; i <= value; i++) {
+        result = result * i;
+      }
+      return result;
+    }
+    Future<String?> ab () async{
+      if(_YouchanState.dollerYen2 == null ||_YouchanState.dollerYen2!.length < 1){
+        var a = await ApiClientCreateUser().fetchApiCreateUser();
+        print("呼ばれた");
+        return a;
+      }
+      // var a = await ApiClientCreateUser().fetchApiCreateUser();
+      var a =_YouchanState.dollerYen2!;
+      return a;
+    };
+    var a000 = await ApiClientCreateUser().fetchApiCreateUser();
     // var b = double.parse(a);
-    _YouchanNotifier.changeDollerYen(double.parse(a));
+    var a = await ab();
+    print(a);
+    print("iafheiua");
+    print(a);
+    _YouchanNotifier.changeDollerYen(double.parse(a!));
 
     final positionValue = int.parse(_YouchanState.positionValue!);
     final inValue = int.parse(_YouchanState.inValue!);
