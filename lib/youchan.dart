@@ -6,6 +6,7 @@ import 'package:yochan/service/youchan_client.dart';
 import 'package:yochan/view_model/youchan_vm.dart';
 import 'package:yochan/youchanDialog.dart';
 import 'package:yochan/youchanMethod.dart';
+import 'package:yochan/youchanOtherTheme.dart';
 
 class YouChanWidget extends HookConsumerWidget {
   var selectedValue = "Long";
@@ -63,6 +64,7 @@ class YouChanWidget extends HookConsumerWidget {
                         width: double.infinity,
                         decoration: BoxDecoration(
                           // color: Colors.white,
+                          color: OtherTheme(ref).boxColor,
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             // BoxShadow(
@@ -79,7 +81,7 @@ class YouChanWidget extends HookConsumerWidget {
                               child: Text("${_YouchanState.ls}"),
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.transparent,
-                                // elevation: 0,
+                                elevation: 0,
                                 // onPrimary: Colors.blue,
                                 alignment: Alignment.centerLeft,
                               ),
@@ -111,7 +113,7 @@ class YouChanWidget extends HookConsumerWidget {
                     ),
                     Container(
                         decoration: BoxDecoration(
-                          // color: Colors.white,
+                          color: OtherTheme(ref).boxColor,
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             // BoxShadow(
@@ -168,15 +170,15 @@ class YouChanWidget extends HookConsumerWidget {
                     ),
                     Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: OtherTheme(ref).boxColor,
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
-                            BoxShadow(
-                              color: Color.fromARGB(50, 0, 0, 0), //色
-                              spreadRadius: 1,
-                              blurRadius: 10,
-                              offset: Offset(5, 10),
-                            ),
+                            // BoxShadow(
+                            //   color: Color.fromARGB(50, 0, 0, 0), //色
+                            //   spreadRadius: 1,
+                            //   blurRadius: 10,
+                            //   offset: Offset(5, 10),
+                            // ),
                           ],
                         ),
                         child: Padding(
@@ -224,15 +226,15 @@ class YouChanWidget extends HookConsumerWidget {
                     ),
                     Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: OtherTheme(ref).boxColor,
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
-                            BoxShadow(
-                              color: Color.fromARGB(50, 0, 0, 0), //色
-                              spreadRadius: 1,
-                              blurRadius: 10,
-                              offset: Offset(5, 10),
-                            ),
+                            // BoxShadow(
+                            //   color: Color.fromARGB(50, 0, 0, 0), //色
+                            //   spreadRadius: 1,
+                            //   blurRadius: 10,
+                            //   offset: Offset(5, 10),
+                            // ),
                           ],
                         ),
                         child: Padding(
@@ -285,15 +287,15 @@ class YouChanWidget extends HookConsumerWidget {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: OtherTheme(ref).boxColor,
                               borderRadius: BorderRadius.circular(12),
                               boxShadow: [
-                                BoxShadow(
-                                  color: Color.fromARGB(50, 0, 0, 0), //色
-                                  spreadRadius: 1,
-                                  blurRadius: 10,
-                                  offset: Offset(5, 10),
-                                ),
+                                // BoxShadow(
+                                //   color: Color.fromARGB(50, 0, 0, 0), //色
+                                //   spreadRadius: 1,
+                                //   blurRadius: 10,
+                                //   offset: Offset(5, 10),
+                                // ),
                               ],
                             ),
                             child: Padding(
@@ -352,15 +354,15 @@ class YouChanWidget extends HookConsumerWidget {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: OtherTheme(ref).boxColor,
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: [
-                          BoxShadow(
-                            color: Color.fromARGB(50, 0, 0, 0), //色
-                            spreadRadius: 1, 
-                            blurRadius: 10, 
-                            offset: Offset(5, 10),
-                          ),
+                          // BoxShadow(
+                          //   color: Color.fromARGB(50, 0, 0, 0), //色
+                          //   spreadRadius: 1, 
+                          //   blurRadius: 10, 
+                          //   offset: Offset(5, 10),
+                          // ),
                         ],
                       ),
                       child:Padding(

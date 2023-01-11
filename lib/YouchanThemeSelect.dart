@@ -14,38 +14,47 @@ Future<dynamic> YouchanThemeSelect (BuildContext context, WidgetRef ref) async {
   final _ThemeNotifier = ref.watch(ThemeProvider.notifier);
 
   showModalBottomSheet(
-      // backgroundColor:Colors.transparent,
+      backgroundColor:Colors.transparent,
       context: context,
       isScrollControlled: true,
       builder: (context) {
-         return Column(
+        return Container(
+          decoration: BoxDecoration(
+          color:  Theme.of(context).primaryColor,
+          // borderRadius: BorderRadius.only(
+          //       topLeft: Radius.circular(20.0),
+          //       topRight: Radius.circular(20.0),
+          //     ),
+        ),
+        child:Column(
+          
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  // leading: Icon(Icons.music_note),
-                  leading: Padding(
-                    padding: EdgeInsets.all(5),
-                    // decoration: BoxDecoration(
-                    //   // 枠線
-                    //   border: Border.all(color: Colors.blue, width: 2),
-                    //   // 角丸
-                    //   borderRadius: BorderRadius.circular(8),
-                    // ),
-                  ),
-                  title: Text('default style'),
+                  leading: Icon(Icons.square,color:Colors.blueGrey),
+                  title: Text('デフォルトテーマ'),
                   onTap: () =>  _ThemeNotifier.changeThemeNumber(0),
+                  // leading: Material(
+                  //   shape: CircleBorder(
+                  //     side: BorderSide(),
+                  //   ),
+                  //   child:Icon(Icons.square,color:Colors.blueGrey),
+                  // ),
+                  // title: Text('デフォルトテーマ'),
+                  // onTap: () =>  _ThemeNotifier.changeThemeNumber(0),
                 ),
                 ListTile(
-                  leading: Icon(Icons.videocam),
-                  title: Text('light style'),
+                  leading: Icon(Icons.square,color:Colors.blue),
+                  title: Text('ライトテーマ'),
                   onTap: () => _ThemeNotifier.changeThemeNumber(1),
                 ),
                 ListTile(
-                  leading: Icon(Icons.camera),
-                  title: Text('dark style'),
+                  leading: Icon(Icons.square,color:Colors.black),
+                  title: Text('ダークテーマ'),
                   onTap: () => _ThemeNotifier.changeThemeNumber(2),
                 ),
               ],
+            )
             );
           }
     );

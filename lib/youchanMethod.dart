@@ -5,6 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:yochan/service/youchan_client.dart';
 import 'package:yochan/view_model/youchan_vm.dart';
+import 'package:yochan/youchanOtherTheme.dart';
 
 Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
   print("a");
@@ -140,7 +141,8 @@ Future<dynamic> YouchanCalculate (BuildContext context, WidgetRef ref) async {
         return Container(
             decoration: BoxDecoration(
                 // color: Colors.orange,
-                // color: Colors.pink,
+                // color: Color.fromARGB(255, 35, 34, 34),
+                color: OtherTheme(ref).modalSheatBaseColor,
                 borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.0),
                 topRight: Radius.circular(20.0),
