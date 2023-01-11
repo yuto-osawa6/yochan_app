@@ -50,15 +50,15 @@ class YouChanWidget extends HookConsumerWidget {
                     Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          // color: Colors.white,
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
-                            BoxShadow(
-                              color: Color.fromARGB(50, 0, 0, 0), //色
-                              spreadRadius: 1,
-                              blurRadius: 10,
-                              offset: Offset(5, 10),
-                            ),
+                            // BoxShadow(
+                            //   color: Color.fromARGB(50, 0, 0, 0), //色
+                            //   spreadRadius: 1,
+                            //   blurRadius: 10,
+                            //   offset: Offset(5, 10),
+                            // ),
                           ],
                         ),
                         child: Padding(
@@ -67,8 +67,8 @@ class YouChanWidget extends HookConsumerWidget {
                               child: Text("${_YouchanState.ls}"),
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.transparent,
-                                elevation: 0,
-                                onPrimary: Colors.blue,
+                                // elevation: 0,
+                                // onPrimary: Colors.blue,
                                 alignment: Alignment.centerLeft,
                               ),
                               onPressed: () {
@@ -99,15 +99,15 @@ class YouChanWidget extends HookConsumerWidget {
                     ),
                     Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          // color: Colors.white,
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
-                            BoxShadow(
-                              color: Color.fromARGB(50, 0, 0, 0), //色
-                              spreadRadius: 1,
-                              blurRadius: 10,
-                              offset: Offset(5, 10),
-                            ),
+                            // BoxShadow(
+                            //   color: Color.fromARGB(50, 0, 0, 0), //色
+                            //   spreadRadius: 1,
+                            //   blurRadius: 10,
+                            //   offset: Offset(5, 10),
+                            // ),
                           ],
                         ),
                         child: Padding(
@@ -403,8 +403,8 @@ class YouChanWidget extends HookConsumerWidget {
               child: ElevatedButton(
                 child: Icon(Icons.arrow_forward),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orange,
-                  onPrimary: Colors.white,
+                  // primary: Colors.orange,
+                  // onPrimary: Colors.white,
                 ),
                 onPressed: () async{
                   await YouchanCalculate(context, ref);
