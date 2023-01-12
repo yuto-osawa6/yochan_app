@@ -22,8 +22,20 @@ class MyApp extends HookConsumerWidget {
       primaryColorLight: Colors.white,
       // appBarTheme: AppBarTheme(color: Colors.white)
     ),
-    ThemeData.dark(),
-    Theme2,
+    ThemeData.dark().copyWith(
+      elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        primary: Colors.grey[800],
+        elevation: 0,
+        onPrimary: Colors.white,
+        alignment: Alignment.center,
+      ),
+    ),
+      // primaryColor: Colors.white,
+      // primaryColorLight: Colors.white,
+      // appBarTheme: AppBarTheme(color: Colors.white)
+    ),
+    // Theme2,
   ];
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -40,7 +52,18 @@ class MyApp extends HookConsumerWidget {
       // theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       theme:theme[_ThemeState.number],
-      home: YouChanWidget(),
+      home: GestureDetector(
+          onTap: ()  {
+            print("a");
+            // FocusScope.of(context).unfocus();
+            final FocusScopeNode currentScope = FocusScope.of(context);
+              if (!currentScope.hasPrimaryFocus && currentScope.hasFocus) {
+                FocusManager.instance.primaryFocus!.unfocus();
+              }
+            },
+          child: YouChanWidget(),
+        ),
+      // YouChanWidget(),
     );
   }
 }

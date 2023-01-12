@@ -29,34 +29,77 @@ import 'package:flutter/material.dart';
 
 ThemeData Theme1 = ThemeData(
   // brightness: Brightness.dark,
+  appBarTheme: AppBarTheme(
+    backgroundColor:Colors.indigo
+  ),
   scaffoldBackgroundColor: Colors.indigo,
   dialogBackgroundColor:Colors.indigo,
   focusColor: Colors.amber,
   highlightColor:Colors.amber,
   selectedRowColor:Colors.amber,
-  dividerColor: Colors.indigo,
+  dividerColor: Colors.amber,
+  primaryColorLight: Colors.amber,
+  primaryColorDark: Colors.amber,
+  secondaryHeaderColor:Colors.amber,
+  primarySwatch: Colors.brown,
+  accentColor: Colors.brown,
+
+  // accentColor: Colors.green,
   // accentColor: w,
   // backgroundColor: Colors.indigo,
-  primaryColor: Colors.indigo,
+  primaryColor: Color.fromARGB(255, 228, 228, 232),
   textSelectionTheme: TextSelectionThemeData(
     cursorColor: Colors.amber,
     selectionColor: Colors.amber,
     selectionHandleColor: Colors.amber
   ),
+  hintColor:Colors.blue,
+  
   inputDecorationTheme: InputDecorationTheme(
-    suffixIconColor:Colors.amber,
+    // suffixIconColor:Colors.white,
+    // iconColor: Colors.white,
+    hoverColor:Colors.amber,
+    fillColor:Colors.amber,
+    focusColor: Colors.amber,
+    
+    // suffixIconColor: Colors.black,
+    suffixStyle: TextStyle(
+      color: Colors.blue
+    ),
+    
+    // color: _isFocus ? /*フォーカス時の色*/: /*通常時の色*/,
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      primary: Colors.white,
+      elevation: 0,
+      onPrimary: Colors.indigo[800],
+      alignment: Alignment.center,
+    ),
   ),
   // brightness: Brightness.dark,
   // brightness: primaryColorDark,
   colorScheme: ColorScheme.fromSwatch(
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.red,
         backgroundColor: Colors.indigo,
 //         cardColor: Colors.green,
         accentColor: Colors.yellow
 //         // primaryColorDark: Colors.indigo,
 //         // accentColor:Colors.green
         
-        ),
+        ).copyWith(
+    secondary: Colors.red,
+    onSecondary: Colors.pink,
+    primary:Colors.amber,
+    onPrimary: Colors.white,
+    tertiary: Colors.pink,
+    onTertiary: Colors.pink,
+    // surface: Colors.white,
+    // onSurface: Colors.white,
+    inverseSurface:Colors.pink,
+    onInverseSurface:Colors.pink,
+    inversePrimary:Colors.pink
+  ),
         // .copyWith(
         //   // primary: Colors.indigo,
         //             secondarColor.fromARGB(255, 26, 28, 33)ent),
@@ -136,7 +179,7 @@ ThemeData Theme2 = ThemeData(
       primary: Colors.green[900],
       elevation: 0,
       onPrimary: Colors.orange[100],
-      alignment: Alignment.centerLeft,
+      alignment: Alignment.center,
     ),
   ),
    iconTheme: IconThemeData(

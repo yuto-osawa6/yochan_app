@@ -54,11 +54,11 @@ Future<dynamic> YouchanThemeSelect (BuildContext context, WidgetRef ref) async {
                   title: Text('ダークテーマ'),
                   onTap: () => _ThemeNotifier.changeThemeNumber(2),
                 ),
-                ListTile(
-                  leading: Icon(Icons.square,color:Colors.orangeAccent),
-                  title: Text('オレンジテーマ'),
-                  onTap: () => _ThemeNotifier.changeThemeNumber(3),
-                ),
+                // ListTile(
+                //   leading: Icon(Icons.square,color:Colors.orangeAccent),
+                //   title: Text('オレンジテーマ'),
+                //   onTap: () => _ThemeNotifier.changeThemeNumber(3),
+                // ),
               ],
             )
             );

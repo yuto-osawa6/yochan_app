@@ -41,8 +41,11 @@ dynamic OtherTheme = (WidgetRef ref) {
 
 class yDefaultTheme {
   // インスタンス変数
-  final boxColor = Colors.indigo[600];
+  // final boxColor = Colors.indigo[600]!.withOpacity(0.5);
+  final boxColor = Colors.white;
   final modalSheatBaseColor = Colors.indigo;
+  final textcolor1 = Colors.indigo;
+
 
 
   // コンストラクタ（class名と一緒。javaも同じっぽい）
@@ -52,10 +55,10 @@ class yDefaultTheme {
 
 class yLightTheme {
   // インスタンス変数
-  final boxColor = Colors.blueGrey[50];
+  final boxColor = Colors.white;
   // final boxColor = Colors.white60;
   final modalSheatBaseColor = Colors.white;
-
+  final textcolor1 = Colors.black;
 
 
   // コンストラクタ（class名と一緒。javaも同じっぽい）
@@ -67,6 +70,7 @@ class yDarkTheme {
   // インスタンス変数
   final boxColor = Colors.black26;
   final modalSheatBaseColor = Colors.grey[850];
+  final textcolor1 = Colors.white;
 
   // コンストラクタ（class名と一緒。javaも同じっぽい）
   yDarkTheme() {
@@ -77,6 +81,8 @@ class yDarkTheme2 {
   // インスタンス変数
   final boxColor = Colors.orange[700];
   final modalSheatBaseColor = Colors.orange[800];
+  final textcolor1 = Colors.black;
+
 
   // コンストラクタ（class名と一緒。javaも同じっぽい）
   yDarkTheme() {
