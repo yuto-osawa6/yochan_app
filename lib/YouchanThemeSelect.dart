@@ -13,6 +13,9 @@ Future<dynamic> YouchanThemeSelect (BuildContext context, WidgetRef ref) async {
   // provider（状態の操作）
   final _ThemeNotifier = ref.watch(ThemeProvider.notifier);
 
+  final _YouchanNotifier = ref.watch(YouchanProvider.notifier);
+
+
   showModalBottomSheet(
       useRootNavigator: true,
       backgroundColor:Colors.transparent,
@@ -34,7 +37,10 @@ Future<dynamic> YouchanThemeSelect (BuildContext context, WidgetRef ref) async {
                 ListTile(
                   leading: Icon(Icons.square,color:Colors.indigo[700]),
                   title: Text('デフォルトテーマ'),
-                  onTap: () =>  _ThemeNotifier.changeThemeNumber(0),
+                  onTap: () {
+                    _ThemeNotifier.changeThemeNumber(0);
+                    _YouchanNotifier.resetValue();
+                  }
                   // leading: Material(
                   //   shape: CircleBorder(
                   //     side: BorderSide(),
@@ -44,15 +50,21 @@ Future<dynamic> YouchanThemeSelect (BuildContext context, WidgetRef ref) async {
                   // title: Text('デフォルトテーマ'),
                   // onTap: () =>  _ThemeNotifier.changeThemeNumber(0),
                 ),
-                ListTile(
-                  leading: Icon(Icons.square,color:Colors.lightBlue),
-                  title: Text('ライトテーマ'),
-                  onTap: () => _ThemeNotifier.changeThemeNumber(1),
-                ),
+                // ListTile(
+                //   leading: Icon(Icons.square,color:Colors.lightBlue),
+                //   title: Text('ライトテーマ'),
+                //   onTap: () {
+                //     _ThemeNotifier.changeThemeNumber(1);
+                //     _YouchanNotifier.resetValue();
+                //   }
+                // ),
                 ListTile(
                   leading: Icon(Icons.square,color:Colors.black),
                   title: Text('ダークテーマ'),
-                  onTap: () => _ThemeNotifier.changeThemeNumber(2),
+                  onTap: () {
+                    _ThemeNotifier.changeThemeNumber(2);
+                    _YouchanNotifier.resetValue();
+                  }
                 ),
                 // ListTile(
                 //   leading: Icon(Icons.square,color:Colors.orangeAccent),

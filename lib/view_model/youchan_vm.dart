@@ -31,8 +31,11 @@ class YouchanNotifier extends StateNotifier<Youchan> {
   void changeDollerYen(double value){
     state = state.copyWith(dollerYen: value);
   }
-   void changeDollerYen2(String value){
+  void changeDollerYen2(String value){
     state = state.copyWith(dollerYen2: value);
+  }
+  void resetValue(){
+    state = state.copyWith(ls: "Long",nari: "",tate: "",inValue: "",outValue: "",positionValue: "",dollerYen2: "");
   }
 }
 
